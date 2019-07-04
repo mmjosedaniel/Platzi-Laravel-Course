@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         return view('test', [
-            'title' => 'Test'
+            'title' => $request->query('title','Default Value')
         ]);
     }
 }
