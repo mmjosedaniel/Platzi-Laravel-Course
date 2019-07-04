@@ -81,7 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Test
+                    @isset($title)
+                        {{ $title }}
+                    @else
+                     {{ 'No title' }}
+                    @endisset
                 </div>
 
                 <div class="links">
